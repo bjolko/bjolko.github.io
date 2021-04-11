@@ -6,6 +6,6 @@ layout: home
 title: Home
 image:
   path: /assets/images/android-chrome-192x192.png
-  height: 100
-  width: 100
+  height: 16
+  width: 16
 ---
