@@ -7,7 +7,7 @@ categories: language learning
 permalink: /how-to-learn-french/
 ---
 
-![France](/assets/images/posts/paris.jpg)
+![France](/assets/posts/how-to-learn-french/paris.jpg)
 
 One of my New year resolutions was to learn French and pass the DELF B1 exam. I made it, so I want to share how I did it without courses and tutors. Allons-y!
 
