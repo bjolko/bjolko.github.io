@@ -40,11 +40,11 @@ df %>%
 ```
 ![Grouped bar chart](/assets/posts/dataviz-makeover-devaluation/grouped_bar.png)
 
-**Pros**
+#### Pros
 * Clear comparison of prices before and after
 * Sort from the most expensive to the cheapest product
 
-**Cons**
+#### Cons
 * Hard to see the relative difference
 * Focus on prices themselves and not on their changes
 
@@ -59,11 +59,11 @@ df_difference %>%
 ```
 ![Grouped bar chart](/assets/posts/dataviz-makeover-devaluation/difference_bar.png)
 
-**Pros**
+#### Pros
 * Focus on products with the highest inflation rate
 * Comparison of devaluation rate and inflation per product
 
-**Cons**
+#### Cons
 * Missing labels for each bar for better readability
 * Chart noise like black borders or panel grid
 
