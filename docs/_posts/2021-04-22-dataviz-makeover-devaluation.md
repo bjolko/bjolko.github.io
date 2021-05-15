@@ -115,4 +115,4 @@ df_difference %>%
 ```
 ![Grouped bar chart](/assets/posts/dataviz-makeover-devaluation/difference_bar_updated.png)
 
-You can find the full code in this [Jupyter Notebook](/assets/posts/dataviz-makeover-devaluation/vlast.kz-devaluation-chart-makeover.ipynb) and the data [here](/assets/posts/dataviz-makeover-devaluation/vlast_prices.csv).
+You can find the full code in this [Jupyter Notebook](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/dataviz-makeover-devaluation/vlast.kz-devaluation-chart-makeover.ipynb) and the data [here](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/dataviz-makeover-devaluation/vlast_prices.csv).

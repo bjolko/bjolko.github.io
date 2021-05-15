@@ -195,4 +195,4 @@ def lower_names(df):
 * if you are missing any functions in pandas, no problem, you can create your own and pass it to [pipe()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pipe.html) as we did with `lower_names()`
 * as you may have noticed, the `lambda x` expression is common in method chaining, where `x` is the dataframe itself. The difference from the initial `df` (because why not just use it?) is that `x` is passed from the previous step, i.e. it's processed accordingly.
 
-You can find the full code [here](/assets/posts/r-to-python/r-to-python-r) and [here](/assets/posts/r-to-python/r-to-python-python).
+You can find the full code [here](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/r-to-python/r-to-python-r.ipynb) and [here](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/r-to-python/r-to-python-python.ipynb).
