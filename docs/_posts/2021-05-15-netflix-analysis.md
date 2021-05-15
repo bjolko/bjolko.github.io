@@ -175,8 +175,8 @@ def make_top(df, column, top_size=5):
 colname = 'genre'
 make_top(df_merged, colname)
 ```
-![Top-5 genres for Home](/assets/posts/netflix-analysis/genre_home.png)
-![Top-5 genres for Family](/assets/posts/netflix-analysis/genre_family.png)
+![Top-5 genres for Home](/assets/posts/netflix-analysis/genre_Home.png)
+![Top-5 genres for Family](/assets/posts/netflix-analysis/genre_Family.png)
 
 Interestingly we see quite different preferences in the profiles :)
 
@@ -185,8 +185,8 @@ Interestingly we see quite different preferences in the profiles :)
 colname = 'country'
 make_top(df_merged, colname)
 ```
-![Top-5 countries for Home](/assets/posts/netflix-analysis/country_home.png)
-![Top-5 countries for Family](/assets/posts/netflix-analysis/country_family.png)
+![Top-5 countries for Home](/assets/posts/netflix-analysis/country_Home.png)
+![Top-5 countries for Family](/assets/posts/netflix-analysis/country_Family.png)
 It's hard to judge as most of the content on Netflix is from the US, but positions from 3 to 5 differ.
 
 ## Hours activity
