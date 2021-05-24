@@ -82,8 +82,8 @@ mutate(
 #### pandas
 ```python
 df.assign(
-	Date = lambda x: pd.to_datetime(x['Date']),
-	Weekly_Sales_K = lambda x: x['Weekly_Sales'] / 1000
+	Date = pd.to_datetime(df['Date']),
+	Weekly_Sales_K = df['Weekly_Sales'] / 1000
 )
 ```
 
