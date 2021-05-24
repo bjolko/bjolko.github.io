@@ -73,17 +73,17 @@ df.sort_values('Weekly_Sales', ascending=False)
 #### dplyr
 ```r
 mutate(
-    df,
-    Date = lubridate::dmy(Date),
-    Weekly_Sales_K = Weekly_Sales / 1000
+  df,
+  Date = lubridate::dmy(Date),
+  Weekly_Sales_K = Weekly_Sales / 1000
 )
 ```
 
 #### pandas
 ```python
 df.assign(
-	Date = pd.to_datetime(df['Date']),
-	Weekly_Sales_K = df['Weekly_Sales'] / 1000
+  Date = pd.to_datetime(df['Date']),
+  Weekly_Sales_K = df['Weekly_Sales'] / 1000
 )
 ```
 
@@ -104,17 +104,17 @@ df.rename(columns={'Holiday_Flag': 'is_holiday'})
 #### dplyr
 ```r
 group_by(df, Store) %>%
-    summarise(total_sales = sum(Weekly_Sales))
+  summarise(total_sales = sum(Weekly_Sales))
 ```
 
 #### pandas
 ```python
 (
-    df
-    .groupby('Store')
-    .agg(
-        total_sales = ('Weekly_Sales', 'sum')
-    )
+  df
+  .groupby('Store')
+  .agg(
+      total_sales = ('Weekly_Sales', 'sum')
+  )
 )
 ```
 ## Window functions
@@ -123,8 +123,8 @@ Let's add a column with total sales per week.
 #### dplyr
 ```r
 df %>%
-    group_by(Store) %>%
-    mutate(total_sales = sum(Weekly_Sales))
+  group_by(Store) %>%
+  mutate(total_sales = sum(Weekly_Sales))
 ```
 
 <img src="/assets/posts/r-to-python/window_function_r.png" alt="Window Functions in R" width="300"/>
@@ -133,10 +133,10 @@ df %>%
 #### pandas
 ```python
 (
-    df
-    .assign(
-        total_sales = lambda x: x.groupby('Store')['Weekly_Sales'].transform('sum')
-    )
+  df
+  .assign(
+      total_sales = lambda x: x.groupby('Store')['Weekly_Sales'].transform('sum')
+  )
 )
 ```
 
@@ -151,14 +151,14 @@ Now let's select top-5 stores per holiday week based on sales!
 #### dplyr
 ```r
 df %>%
-    select_all(tolower) %>% # All column names to lower case
-    filter(holiday_flag == 1) %>% # Filter out only holiday weeks
-    select(date, store, weekly_sales) %>% # Select needed columns
-    mutate(date = lubridate::dmy(date)) %>% # Convert Date from string to date type
-    arrange(desc(date), -weekly_sales) %>% # Add descending sorting by date and sales
-    group_by(date) %>%
-    top_n(5) %>% # Top-5 stores based on Weekly Sales
-    mutate(weekly_sales = scales::comma_format()(weekly_sales)) # Adjust number format for readability
+  select_all(tolower) %>% # All column names to lower case
+  filter(holiday_flag == 1) %>% # Filter out only holiday weeks
+  select(date, store, weekly_sales) %>% # Select needed columns
+  mutate(date = lubridate::dmy(date)) %>% # Convert Date from string to date type
+  arrange(desc(date), -weekly_sales) %>% # Add descending sorting by date and sales
+  group_by(date) %>%
+  top_n(5) %>% # Top-5 stores based on Weekly Sales
+  mutate(weekly_sales = scales::comma_format()(weekly_sales)) # Adjust number format for readability
 ```
 
 <img src="/assets/posts/r-to-python/sales_report_r.png" alt="Sales report in R" width="300"/>
@@ -167,24 +167,24 @@ df %>%
 #### pandas
 ```python
 def lower_names(df):
-    df.columns = df.columns.str.lower()
-    return df
+  df.columns = df.columns.str.lower()
+  return df
 
 (
-    df
-    .pipe(lower_names) # All column names to lower case
-    .loc[lambda x: x['holiday_flag'] == 1] # Filter out only holiday
-    [['date', 'store', 'weekly_sales']] # Select needed columns
-    .assign( # Convert Date from string to date type
-        date = lambda x: pd.to_datetime(x['date'], format='%d-%m-%Y')
-    )
-    .sort_values(by=['date', 'weekly_sales'], ascending=False) # Add descending sorting by date and sales
-    .groupby('date')
-    .head(5) # Top-5 stores based on Weekly Sales
-    .style.format({ # Adjust formats for readability
-        'weekly_sales': '{:,.0f}',
-        'date': '{:%Y-%m-%d}'
-    })
+  df
+  .pipe(lower_names) # All column names to lower case
+  .loc[lambda x: x['holiday_flag'] == 1] # Filter out only holiday
+  [['date', 'store', 'weekly_sales']] # Select needed columns
+  .assign( # Convert Date from string to date type
+      date = lambda x: pd.to_datetime(x['date'], format='%d-%m-%Y')
+      )
+      .sort_values(by=['date', 'weekly_sales'], ascending=False) # Add descending sorting by date and sales
+      .groupby('date')
+      .head(5) # Top-5 stores based on Weekly Sales
+      .style.format({ # Adjust formats for readability
+      'weekly_sales': '{:,.0f}',
+      'date': '{:%Y-%m-%d}'
+  })
 
 )
 ```
