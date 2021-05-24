@@ -13,7 +13,7 @@ I am investing for over a year now, so I would like to analyze my portfolio and 
 My broker is TD Ameritrade, so this article is based on their [API](https://developer.tdameritrade.com/apis) data analyzed in Python, but you can apply this idea to any broker and tool of your own.
 
 # Connecting to API
-I am going to use the `td-ameritrade-python-api` package, go through the [documentation]((https://pypi.org/project/td-ameritrade-python-api/)) or [video tutorials](https://www.youtube.com/watch?v=qJ94sSyPGBw&list=PLcFcktZ0wnNnKvxFkJ5B7pvGaGa81Ny-6&index=17) to learn more about authorization flow and usage. Let's start a new session: for the first time, the package will ask you to authorize your app in TD Ameritrade, then it will store acquired credentials in the `YOUR_PATH.json` file, so you won't need to re-authorize every time.
+I am going to use the `td-ameritrade-python-api` package, go through the [documentation](https://pypi.org/project/td-ameritrade-python-api/) or [video tutorials](https://www.youtube.com/watch?v=qJ94sSyPGBw&list=PLcFcktZ0wnNnKvxFkJ5B7pvGaGa81Ny-6&index=17) to learn more about authorization flow and usage. Let's start a new session: for the first time, the package will ask you to authorize your app in TD Ameritrade, then it will store acquired credentials in the `YOUR_PATH.json` file, so you won't need to re-authorize every time.
 
 ```python
 # pip install td-ameritrade-python-api
