@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to analyze investment portfolio using Python, Part 1: Telegram Notifications"
+title:  "How to analyze investment portfolio using Python, Part 2: Telegram Notifications"
 date: 2021-05-20 11:06:00 +0600
 categories: data analysis
 permalink: /investment-portfolio-part2/
