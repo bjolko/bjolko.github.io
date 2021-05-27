@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "How to analyze investment portfolio using Python, Part 2: Telegram Notifications"
-date: 2021-05-20 11:06:00 +0600
+date: 2021-05-26 11:06:00 +0600
 categories: data analysis
 permalink: /investment-portfolio-part2/
 ---
@@ -186,6 +186,7 @@ python-3.7.10
 ```
 worker: python3 <YOUR SCRIPT NAME>.py
 ```
+
 It will tell Heroku what to run and how.
 ## Deployment
 Now we are ready to deploy! You can use both Heroku UI and the command line. I will go through the CLI example.
