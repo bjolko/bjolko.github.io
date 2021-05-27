@@ -43,9 +43,12 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-paginate
 
 # Google Analytics
 google_analytics: UA-194316282-1
+
+paginate:     5
 
 # Exclude from processing.
 # The following items will not be processed, by default.
