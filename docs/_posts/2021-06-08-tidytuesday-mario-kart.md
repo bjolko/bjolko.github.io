@@ -108,7 +108,7 @@ records %>%
 
 ![Annotation](/assets/posts/tidytuesday-mario-kart/4-annotation.svg)
 
-Analytics part is ready!
+The analytics part is ready!
 
 # Legend & Colors
 I chose different colors for a legend and plot lines, I use [Color Palettes](https://colorpalettes.net/color-palette-4255/) service for this.
