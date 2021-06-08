@@ -95,7 +95,7 @@ records %>%
     'text',
     x = 2008,
     y = 225,
-    size = 2.8,
+    size = 4,
     label = 'Lowest\nnumber of players'
   ) +
   geom_curve(
@@ -133,7 +133,7 @@ records %>%
     'text',
     x = 2008,
     y = 225,
-    size = 2.8,
+    size = 4,
     label = 'Lowest\nnumber of players',
     color = title_color
   ) +
@@ -183,7 +183,7 @@ records %>%
     'text',
     x = 2008,
     y = 225,
-    size = 2.8,
+    size = 4,
     label = 'Lowest\nnumber of players',
     color = title_color
   ) +
@@ -210,8 +210,8 @@ records %>%
     panel.grid = element_blank(),
     axis.line.x.bottom = element_line(color = line_color),
     axis.line.y.left = element_line(color = line_color),
-    plot.title = element_markdown(color = title_color, size = 11, family = 'Merriweather'),
-    text = element_text(color = text_color, family = 'Montserrat')
+    plot.title = element_markdown(color = title_color, size = 14, family = 'Merriweather'),
+    text = element_text(color = text_color, size = 11, family = 'Montserrat')
   )
 ```
 ![Final Plot](/assets/posts/tidytuesday-mario-kart/6-final-plot.svg)
