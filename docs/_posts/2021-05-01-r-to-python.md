@@ -135,7 +135,7 @@ df %>%
 (
   df
   .assign(
-      total_sales = lambda x: x.groupby('Store')['Weekly_Sales'].transform('sum')
+      total_sales = df.groupby('Store')['Weekly_Sales'].transform('sum')
   )
 )
 ```
