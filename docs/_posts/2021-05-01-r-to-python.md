@@ -182,8 +182,8 @@ def lower_names(df):
       .groupby('date')
       .head(5) # Top-5 stores based on Weekly Sales
       .style.format({ # Adjust formats for readability
-      'weekly_sales': '{:,.0f}',
-      'date': '{:%Y-%m-%d}'
+        'weekly_sales': '{:,.0f}',
+        'date': '{:%Y-%m-%d}'
   })
 
 )
@@ -193,6 +193,6 @@ def lower_names(df):
 
 ## A couple of notes
 * if you are missing any functions in pandas, no problem, you can create your own and pass it to [pipe()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.pipe.html) as we did with `lower_names()`
-* as you may have noticed, the `lambda x` expression is common in method chaining, where `x` is the dataframe itself. The difference from the initial `df` (because why not just use it?) is that `x` is passed from the previous step, i.e. it's processed accordingly.
+* as you may have noticed, the `lambda x` expression is common in method chaining, where `x` is the dataframe itself. The difference from the initial `df` (because why not just use it?) is that `x` is passed from the previous step, so it's processed accordingly.
 
-You can find the full code [here](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/r-to-python/r-to-python-r.ipynb) and [here](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/r-to-python/r-to-python-python.ipynb).
+You can find the full code here [R](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/r-to-python/r-to-python-r.ipynb) and [Python](https://github.com/bjolko/bjolko.github.io/blob/master/docs/assets/posts/r-to-python/r-to-python-python.ipynb).
